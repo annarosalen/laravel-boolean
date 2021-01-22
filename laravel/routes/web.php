@@ -9,14 +9,14 @@ Route::get('/', function () {
 
 Route::get('/helloAll', function(){
 
-    return view('home');
+    return view('helloAll');
 });
 
 Route::get('/helloYou', function(){
 
     $name = 'Mario';
 
-    return view('hello',
+    return view('helloyou',
         [
             'name' => $name
         ]
@@ -27,9 +27,15 @@ Route::get('/helloYou2', function(){
 
     $name = 'Anna';
 
-    return view('hello',
+    return view('helloyou',
         [
             'name' => $name
         ]
     );
 });
+
+Route::get('/holatodos', 'MainController@hola');
+
+Route::get('/holatu', 'MainController@holatu');
+
+Route::get('/holatu2', 'MainController@holatu2');
